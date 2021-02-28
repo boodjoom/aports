@@ -15,11 +15,11 @@ _depends_dev="perl gmp-dev elfutils-dev bash flex bison"
 makedepends="$_depends_dev sed installkernel bc linux-headers linux-firmware-any openssl-dev
 	diffutils findutils"
 options="!strip"
-_config=${config:-config-lts.${CARCH}}
+_config=${config:-config-ecp.${CARCH}}
 install=
 source="https://cdn.kernel.org/pub/linux/kernel/v${pkgver%%.*}.x/linux-$_kernver.tar.xz
 
-	config-lts.armv7
+	config-ecp.armv7
 	"
 subpackages="$pkgname-dev:_dev:$CBUILD_ARCH"
 _flavors=
