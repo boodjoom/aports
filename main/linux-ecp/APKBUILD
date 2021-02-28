@@ -21,6 +21,7 @@ source="https://cdn.kernel.org/pub/linux/kernel/v${pkgver%%.*}.x/linux-$_kernver
 
 	config-ecp.armv7
 
+	dts-Makefile
 	tq-imx6ul.dtsi
 	tq-imx6ul-mba6ul-lcdif.dtsi
 	tq-imx6ul-mba6ul-lvds.dtsi
@@ -92,6 +93,7 @@ prepare() {
 	# remove dts files and copy ours
 	rm -f "$srcdir"/linux-$_kernver/arch/"$_carch"/boot/dts/*.dts
 	rm -f "$srcdir"/linux-$_kernver/arch/"$_carch"/boot/dts/*.dtsi
+	rm -f "$srcdir"/linux-$_kernver/arch/"$_carch"/boot/dts/Makefile
 	for i in $source; do
 		case $i in
 		*.dts|*.dtsi)
@@ -100,6 +102,7 @@ prepare() {
 			;;
 		esac
 	done
+	cp "$srcdir"/dts-Makefile "$srcdir"/linux-$_kernver/arch/"$_carch"/boot/dts/Makefile
 }
 
 _olddefconfig() {
@@ -248,4 +251,5 @@ bbf0891d7406c873e21bac210e670d9fb8b69489c097723efbafe07acaebd9817c6bc0f1b3d30863
 8fa895e0347fcb377053a77cd0bb4999161454c572b2cbd99a182419da871e19be159afd8ee5bcaaa1e68478f51faaad8b7f6bac21deead162de1971d18e29c8  tq-mba6ul-common.dtsi
 1425b1ee30510f0c238c1fd2e40cd006609ecd0b1d01050df193cb75b1515e491083a0b1bd0528103a07098444d63f26ed825f78e9e5225a4bf424db546ba24b  tq-tqma6ul-common.dtsi
 d7b6166c0341d1fd330b939e930a4e9bfdf10432844da7d51111e4fcbe2e641737c0f98066f77771e04f4ec5e2e5843718a2075adabd63f7bcebc375ca9c7140  tq-tqma6ulx-common.dtsi
-be9cfe1ae6697956ca7476cedc212a8cbd9da2c3c72096a89afaaf73c5b6655fd04d458f96c472f680c5513c0ea3e4449c4092a958425b6040f0c7774453cd2f  patch-5.10.16.xz"
+be9cfe1ae6697956ca7476cedc212a8cbd9da2c3c72096a89afaaf73c5b6655fd04d458f96c472f680c5513c0ea3e4449c4092a958425b6040f0c7774453cd2f  patch-5.10.16.xz
+0 dts-Makefile"

@@ -1,0 +1,4 @@
+# SPDX-License-Identifier: GPL-2.0
+dtb-$(CONFIG_SOC_IMX6UL) += \
+	tq-imx6ul-mba6ulx-lvds.dtb \
+	tq-imx6ul-mba6ulx.dtb
