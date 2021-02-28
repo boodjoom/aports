@@ -21,15 +21,15 @@ source="https://cdn.kernel.org/pub/linux/kernel/v${pkgver%%.*}.x/linux-$_kernver
 
 	config-ecp.armv7
 
-	imx6ul.dtsi
-	imx6ul-mba6ul-lcdif.dtsi
-	imx6ul-mba6ul-lvds.dtsi
-	imx6ul-mba6ulx.dts
-	imx6ul-mba6ulx-lvds.dts
-	imx6ul-tqma6ulx.dtsi
-	mba6ul-common.dtsi
-	tqma6ul-common.dtsi
-	tqma6ulx-common.dtsi
+	tq-imx6ul.dtsi
+	tq-imx6ul-mba6ul-lcdif.dtsi
+	tq-imx6ul-mba6ul-lvds.dtsi
+	tq-imx6ul-mba6ulx.dts
+	tq-imx6ul-mba6ulx-lvds.dts
+	tq-imx6ul-tqma6ulx.dtsi
+	tq-mba6ul-common.dtsi
+	tq-tqma6ul-common.dtsi
+	tq-tqma6ulx-common.dtsi
 	"
 subpackages="$pkgname-dev:_dev:$CBUILD_ARCH"
 _flavors=
@@ -239,12 +239,12 @@ _dev() {
 sha512sums="95bc137d0cf9148da6a9d1f1a878698dc27b40f68e22c597544010a6c591ce1b256f083489d3ff45ff77753289b535135590194d88ef9f007d0ddab3d74de70e  linux-5.10.tar.xz
 e6e6ce2fa157b67d2553e1489fe9c9b7fd110a8a516b54f5b656de2e2f8c61e6319c0d6921fe58951e1ecdf0134c83d12e4e6d503395739a97c34e180fb05885  config-ecp.armv7
 be9cfe1ae6697956ca7476cedc212a8cbd9da2c3c72096a89afaaf73c5b6655fd04d458f96c472f680c5513c0ea3e4449c4092a958425b6040f0c7774453cd2f  patch-5.10.16.xz
-0	imx6ul.dtsi
-0	imx6ul-mba6ul-lcdif.dtsi
-0	imx6ul-mba6ul-lvds.dtsi
-0	imx6ul-mba6ulx.dts
-0	imx6ul-mba6ulx-lvds.dts
-0	imx6ul-tqma6ulx.dtsi
-0	mba6ul-common.dtsi
-0	tqma6ul-common.dtsi
-0	tqma6ulx-common.dtsi"
+0	tq-imx6ul.dtsi
+0	tq-imx6ul-mba6ul-lcdif.dtsi
+0	tq-imx6ul-mba6ul-lvds.dtsi
+0	tq-imx6ul-mba6ulx.dts
+0	tq-imx6ul-mba6ulx-lvds.dts
+0	tq-imx6ul-tqma6ulx.dtsi
+0	tq-mba6ul-common.dtsi
+0	tq-tqma6ul-common.dtsi
+0	tq-tqma6ulx-common.dtsi"
