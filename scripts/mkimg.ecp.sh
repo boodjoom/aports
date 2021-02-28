@@ -4,9 +4,12 @@ profile_ecp() {
 		ECP."
 	arch="armv7"
 	kernel_flavors="ecp"
+	initfs_cmdline="modules=loop,squashfs,sd-mod,usb-storage quiet"
 	initfs_features="base bootchart squashfs kms mmc usb"
 	image_ext="tar.gz"
 	hostname="ecp"
-	apks="$apks tslib"
+	apks="alpine-base busybox kbd-bkeymaps chrony e2fsprogs haveged network-extras openssl openssh tzdata
+	 tslib libjpeg-turbo pcre libpcre2 libstdc++ libpng libcrypto1.1 freetype fontconfig"
+	apkovl="genapkovl-ecp.sh"
 }
 
