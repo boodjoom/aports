@@ -90,12 +90,13 @@ prepare() {
 	_olddefconfig
 
 	# remove dts files and copy ours
-	rm -f "$srcdir"/linux-$_kernver/arch/"$_carch"/boot/*.dts
+	rm -f "$srcdir"/linux-$_kernver/arch/"$_carch"/boot/dts/*.dts
+	rm -f "$srcdir"/linux-$_kernver/arch/"$_carch"/boot/dts/*.dtsi
 	for i in $source; do
 		case $i in
 		*.dts|*.dtsi)
 			msg "Copying $i..."
-			cp "${i}" "$srcdir"/linux-$_kernver/arch/"$_carch"/boot
+			cp "$srcdir"/${i} "$srcdir"/linux-$_kernver/arch/"$_carch"/boot/dts
 			;;
 		esac
 	done
