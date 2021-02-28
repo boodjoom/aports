@@ -8,8 +8,8 @@ profile_ecp() {
 	initfs_features="base bootchart squashfs kms mmc usb"
 	image_ext="tar.gz"
 	hostname="ecp"
-	apks="alpine-base busybox kbd-bkeymaps chrony e2fsprogs haveged network-extras openssl openssh tzdata
-	 tslib libjpeg-turbo pcre libpcre2 libstdc++ libpng libcrypto1.1 freetype fontconfig"
+	apks="alpine-base busybox kbd-bkeymaps chrony e2fsprogs haveged openssl openssh tzdata
+	 tslib libjpeg-turbo pcre libstdc++ libpng libcrypto1.1 freetype fontconfig"
 	apkovl="genapkovl-ecp.sh"
 }
 
